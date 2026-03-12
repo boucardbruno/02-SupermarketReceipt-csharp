@@ -8,17 +8,17 @@ public class ShoppingCart
 {
     public static readonly CultureInfo Culture = CultureInfo.CreateSpecificCulture("en-GB");
     private readonly StrategyDiscountFactory _discountFactory = new();
-    private readonly List<ProductQuantity> _items = [];
+    private readonly List<CartItem> _items = [];
     private readonly Dictionary<Product, double> _productQuantities = new();
 
-    public List<ProductQuantity> GetItems()
+    public List<CartItem> GetItems()
     {
         return [.._items];
     }
 
     public void AddItemQuantity(Product product, double quantity)
     {
-        _items.Add(new ProductQuantity(product, quantity));
+        _items.Add(new CartItem(product, quantity));
         _productQuantities.TryAdd(product, 0);
         _productQuantities[product] += quantity;
     }

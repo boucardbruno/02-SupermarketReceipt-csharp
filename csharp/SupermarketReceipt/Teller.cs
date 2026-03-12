@@ -11,7 +11,7 @@ public class Teller(ISupermarketCatalog catalog)
         Offers[product] = new Offer(offerType, argument);
     }
 
-    private void AddProductToReceipt(List<ProductQuantity> productQuantities, Receipt receipt)
+    private void AddProductToReceipt(List<CartItem> productQuantities, Receipt receipt)
     {
         foreach (var productQuantity in productQuantities)
             receipt.AddProduct(productQuantity,

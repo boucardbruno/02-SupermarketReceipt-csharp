@@ -15,9 +15,9 @@ public class Receipt
         return Math.Round(totalPrice, 2);
     }
 
-    public void AddProduct(ProductQuantity productQuantity, double price, double totalPrice)
+    public void AddProduct(CartItem cartItem, double price, double totalPrice)
     {
-        _items.Add(new ReceiptItem(productQuantity.Product, productQuantity.Quantity, price, totalPrice));
+        _items.Add(new ReceiptItem(cartItem.Product, cartItem.Quantity, price, totalPrice));
     }
 
     public List<ReceiptItem> GetItems()

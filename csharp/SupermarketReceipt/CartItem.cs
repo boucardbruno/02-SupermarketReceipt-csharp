@@ -3,7 +3,7 @@ using Value;
 
 namespace SupermarketReceipt;
 
-public class ProductQuantity(Product product, double quantity) : ValueType<ProductQuantity>
+public class CartItem(Product product, double quantity) : ValueType<CartItem>
 {
     public Product Product { get; } = product;
     public double Quantity { get; } = quantity;
